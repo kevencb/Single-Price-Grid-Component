@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$Cyan: hsl(179, 62%, 43%);
+$BrighYellow: hsl(71, 73%, 54%);
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+$CyanLigth: #4abebd;
+$White: #fff;
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    align-items: center;
+    background-color: $LightGray;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    justify-content: center;
+}
+
+.h1{
+    color: $Cyan;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+}
+
+.h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 2.6rem;
+}
+
+.h3-extra{
+    align-items: center;
+    color: $White;
+    display: flex;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin-bottom: 0.4rem;
+    span{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-left: 1.1rem;
+        opacity: 0.5;
+    }
+}
+
+.h4{
+    color: $White;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+ul{
+    color: $White;
+    font-size: 1.4rem;
+    li{
+        line-height: 2rem;
+        list-style: none;
+        opacity: .75;
+    }
+}
+
+.text{
+    color: $GrayishBlue;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+
+.button{
+    align-items: center;
+    background-color: $BrighYellow;
+    border-radius: 0.5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
+    color: $White;
+    display: flex;
+    font-size: 1.6rem;
+    height: 4.8rem;
+    justify-content: center;
+    margin-top: 2.6rem;
+    text-decoration: none
+}
+
+.main{
+    border-radius: .8rem;
+    box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
+    margin: 0 auto;
+    margin: 7.2rem auto 2rem;
+    max-width: 63.5rem;
+    overflow: hidden;
+    width: 85%;
+    .section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        padding: 2.8rem 2.4rem;
+        width: 100%;
+    }
+    .section-first{
+        background-color: $White;
+        h3{
+            color: $BrighYellow;
+        }
+    }
+    .section-second{
+        background-color: $Cyan;
+        color: $White;
+    }
+    .section-third{
+        background-color: $CyanLigth;
+        color: $White;
+    }
+}
+
+footer{
+    align-items: center;
+    color: $GrayishBlue;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    text-align: center;
+    a{
+        color: $Cyan;
+        text-decoration: none;
+    };
+}
+
+
+@media (min-width:768px) {
+    .main{
+        align-content: center;
+        display: grid;
+        grid-template-areas:
+            "first first"
+            "second third"
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        .section{
+            padding: 4rem 4rem;
+        }
+    }
+    .section-first{
+        grid-area: first;
+    }
+    .section-second{
+        grid-area: second;
+    }
+    .section-third{
+        grid-area: third;
+    }
+    .h1{
+        font-size: 2.4rem;
+        margin-bottom: 2.4rem;
+    }
+    .h2{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+    }
+    .h3{
+        font-size: 1.8rem;
+        margin-bottom: 1.1rem;
+    }
+    .h3-extra{
+        align-items: center;
+        color: $White;
+        display: flex;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+        margin-bottom: 0.4rem;
+        span{
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-left: 1.1rem;
+            opacity: 0.5;
+        }
+    }
+    .text{
+        font-size: 1.6rem;
+    }
+}
