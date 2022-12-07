@@ -18,14 +18,9 @@ html{
 }
 
 body{
-    align-items: center;
     background-color: $LightGray;
-    display: flex;
-    flex-direction: column;
     font-family: 'Karla', sans-serif;
     font-weight: 400;
-    height: 100vh;
-    justify-content: center;
 }
 
 .h1{
@@ -103,7 +98,7 @@ ul{
     border-radius: .8rem;
     box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
     margin: 0 auto;
-    margin: 7.2rem auto 2rem;
+    margin: 7.2rem auto 3rem;
     max-width: 63.5rem;
     overflow: hidden;
     width: 85%;
@@ -135,7 +130,7 @@ footer{
     align-items: center;
     color: $GrayishBlue;
     display: flex;
-    height: 5rem;
+    height: 3rem;
     justify-content: center;
     text-align: center;
     a{
@@ -146,6 +141,14 @@ footer{
 
 
 @media (min-width:768px) {
+    body{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+
     .main{
         align-content: center;
         display: grid;
